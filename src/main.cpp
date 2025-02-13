@@ -6,7 +6,7 @@
 /*Set to your screen resolution and rotation*/
 #define TFT_HOR_RES 320
 #define TFT_VER_RES 480
-#define TFT_ROTATION LV_DISPLAY_ROTATION_90
+#define TFT_ROTATION LV_DISPLAY_ROTATION_270
 
 /*LVGL draw into this buffer, 1/10 screen size usually works well. The size is in bytes*/
 #define DRAW_BUF_SIZE (TFT_HOR_RES * TFT_VER_RES / 10 * (LV_COLOR_DEPTH / 8))
@@ -87,7 +87,7 @@ void setup()
   lv_obj_t *cont = lv_obj_create(lv_screen_active());
   lv_obj_set_size(cont, 160, 240);
   // lv_obj_center(cont);
-  lv_obj_align(cont,  LV_ALIGN_LEFT_MID, 0, 0);
+  lv_obj_align(cont,  LV_ALIGN_CENTER, 0, 0);
   lv_obj_set_flex_flow(cont, LV_FLEX_FLOW_ROW_WRAP);
 
   uint32_t i;
